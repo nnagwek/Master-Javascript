@@ -24,6 +24,7 @@ class MyArray {
     delete(index){
         const item = this.data[index];
         this.shiftItems(index);
+        return item
     }
 
     shiftItems(index){
@@ -50,5 +51,5 @@ console.log(newArray); // MyArray { length: 3, data: { '0': 'Hi', '1': 'John', '
 // console.log(newArray.pop()); // John
 // console.log(newArray);// MyArray { length: 1, data: { '0': 'Hi' } }
 
-newArray.delete(1);
+newArray.delete(1); // John
 console.log(newArray); // MyArray { length: 2, data: { '0': 'Hi', '1': '!' } }
